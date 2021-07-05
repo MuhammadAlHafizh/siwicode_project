@@ -19,10 +19,10 @@ class Mwisata extends CI_Model
         return $query->row();
     }
 
-    public function updateWisata($id, $nama, $deskripsi, $alamat, $email, $web){
+    public function updateWisata($id, $nama, $deskripsi, $email, $alamat, $web, $idJK, $idJW){
         $this->db->where('id', $id);
-        $this->db->update('wisata', ["nama" => $nama, "deskripsi" => $deskripsi, "alamat" => $alamat, "email" => $email, "web" => $web]);
-    }
+        $this->db->update('wisata', ["nama" => $nama, "deskripsi" => $deskripsi, "alamat" => $alamat, "email" => $email, "web" => $web,'jenis_kuliner_id'=> $idJK,'jenis_wisata_id' => $idJW,'id' => $id]);
+     }
 
     public function getJenisWisata(){
         //buat query

@@ -143,7 +143,7 @@
                             <label>Jenis Kuliner</label>
                             <select name="jkuliner" id="jkuliner" class="form-control">
                                 <?php foreach($jenis_kuliner->result() as $jk){ ?>
-                                    <option value="<?=$jk->id?>"><?=$jk->nama?></option>
+                                    <option value="<?=$jk->id?>"><?=$jk->nama_kuliner?></option>
                                 <?php }; ?>
                             </select>
                         </div>
