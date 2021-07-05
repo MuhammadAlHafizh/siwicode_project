@@ -1,0 +1,73 @@
+.daftargambar{
+    width: 850px;
+    height: auto;
+}
+
+.daftartable{
+    width: max-content;
+    height: auto;
+}
+
+.bayangan{
+    border: 2px solid rgb(138, 89, 252);
+}
+
+.daftargambar2{
+    width: 250px;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.detail{
+    width: 220px;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.imgp{
+    width: 150px;
+    height: 100px;
+}
+
+.testimoni{
+    width: 300px;
+    height: auto;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    color: white;
+}
+
+.bgform{
+    border: solid 2px rgb(55, 0, 182);
+    width: fit-content;
+}
+
+.lebarform{
+    width: 50%;
+    height: 100%;
+    padding-left: 3px;
+}
+
+
+.dropform{
+    width: auto;
+    height: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.textareaform{
+    height: auto;
+    padding: 3px;
+    width: 50%;
+}
+
+.adminbutton{
+    width: 100px;
+    height: auto;
+}
