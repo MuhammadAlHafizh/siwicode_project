@@ -17,6 +17,7 @@
                                             <th>Nama</th>
                                             <th>Wisata</th>
                                             <th>Kuliner</th>
+                                            <th>Deskripsi</th>
                                             <th>Rating</th>
                                             <th>Email</th>
                                             <th>Web</th>
@@ -31,9 +32,10 @@
                                         ?>
                                         <tr>
                                             <td><?= $key+1;?></td>
-                                            <td><?=$wisata->nama?></td>
-                                            <td><?=$wisata->jenis_wisata_id?></td>
-                                            <td><?=$wisata->jenis_kuliner_id?></td>
+                                            <td><?=$wisata->nama_wisata?></td>
+                                            <td><?=$wisata->nama_jw?></td>
+                                            <td><?=$wisata->nama_jk?></td>
+                                            <td><?=$wisata->deskripsi?></td>
                                             <td><?=$wisata->bintang?></td>
                                             <td><?=$wisata->email?></td>
                                             <td><?=$wisata->web?></td>

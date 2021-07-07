@@ -36,7 +36,7 @@
                                             <td><?=$pengunjung->last_login?></td>
                                             <td><?=$pengunjung->created_at?></td>
                                             <td>
-                                                <a class="btn btn-primary btn-sm" href="<?= base_url("index.php/Cadmin/editAdmin/".$pengunjung->id)?>">Edit</a>
+                                                <a class="btn btn-primary btn-sm" href="<?= base_url("index.php/Cadmin/editAdmin/".$pengunjung->id."/".$pengunjung->role)?>">Edit</a>
                                                 <a class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')" href="<?php echo base_url('index.php/Cadmin/aksiHapus/'.$pengunjung->id."/".$pengunjung->role);?>">Hapus</a></button>
                                                 
                                             </td>
@@ -48,7 +48,7 @@
                                         ?>
 
 
-                                        <a class="btn btn-success btn-sm my-1" href="<?= base_url("index.php/Cadmin/tambahAdmin/".$pengunjung->id)?>">Tambah Data</a>
+                                        <a class="btn btn-success btn-sm mb-3" href="<?= base_url("index.php/Cadmin/tambahAdmin/".$pengunjung->role)?>">Tambah Data</a>
                                     </tbody>
                                 </table>
                             </div>
