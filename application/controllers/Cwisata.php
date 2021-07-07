@@ -62,9 +62,11 @@ class Cwisata extends CI_Controller {
         $web = $this->input->post('web');
         $idJK = $this->input->post('jkuliner');
         $idJW = $this->input->post('jwisata');
+        $rating = $this->input->post('rating');
+        $maps = $this->input->post('maps');
 
 
-        $this->Mwisata->tambahWisata($nama, $deskripsi, $email, $alamat, $web, $idJK, $idJW);
+        $this->Mwisata->tambahWisata($nama, $deskripsi, $email, $alamat, $web, $idJK, $idJW, $rating, $maps);
         redirect(base_url("index.php/Cwisata/"));
     }
 }

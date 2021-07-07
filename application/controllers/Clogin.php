@@ -32,6 +32,7 @@ class Clogin extends CI_Controller {
 
 
 			$data_session = array(
+				'id' => $data_admin->id,
 				'nama' => $username,
 				'role' => $role,
 				'status' => "login"
