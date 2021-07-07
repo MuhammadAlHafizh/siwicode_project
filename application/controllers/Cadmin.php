@@ -32,8 +32,9 @@ class Cadmin extends CI_Controller {
         $this->load->view('dashboard/template/footer');
     }
 
-    public function tambahAdmin($id){
-        $data['admin'] = $this->Madmin->findAdmin($id); //mengambil satu data
+    public function tambahAdmin($role){
+
+        $data['role'] = $role;
 
         $this->load->view('dashboard/template/header');
         $this->load->view('dashboard/aksi/Vtambah', $data);
@@ -88,15 +89,22 @@ class Cadmin extends CI_Controller {
 
         $this->Madmin->updateAdmin($id, $username, $passsword, $email);
         if($role == 'admin'){
-            $data_session = array(
-				'nama' => $username,
-				'role' => $role,
-				'status' => "login"
-			);
-			
-			$this->session->set_userdata($data_session);
+            if($this->session->userdata('id') == $id){
+                $data_session = array(
+                    'id' == $id,
+                    'nama' => $username,
+                    'role' => $role,
+                    'status' => "login"
+                );
+                
+                $this->session->set_userdata($data_session);
+    
+                redirect(base_url("index.php/Cadmin/"));
+            }
 
-            redirect(base_url("index.php/Cadmin/"));
+            else {
+                redirect(base_url("index.php/Cadmin/"));
+            }
         }
         else{
             redirect(base_url("index.php/Cadmin/pengunjung"));
